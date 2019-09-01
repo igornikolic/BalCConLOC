@@ -5,7 +5,7 @@ Files relevant for the BalCCon LOC. Plans, code, etc.
 
 - Lighting plan
 - ESP32 code for the Artnet DMX LEDstrip controllers
-- Code for producing ledcat input ( https://github.com/polyfloyd/ledcat ) (coming soon)S
+- Code for producing ledcat input ( https://github.com/polyfloyd/ledcat ) (coming soon)
 - QLC+ fixture definitions, effects and mixing panel
 
 Esthetics and vision :
