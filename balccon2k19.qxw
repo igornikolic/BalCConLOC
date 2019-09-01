@@ -9,17 +9,25 @@
  <Engine>
   <InputOutputMap>
    <Universe Name="Universe 1" ID="0">
+    <Input Plugin="ArtNet" Line="1"/>
     <Output Plugin="ArtNet" Line="1">
      <PluginParameters outputUni="1"/>
     </Output>
    </Universe>
    <Universe Name="Universe 2" ID="1">
+    <Input Plugin="ArtNet" Line="1"/>
     <Output Plugin="ArtNet" Line="1">
      <PluginParameters outputUni="2"/>
     </Output>
    </Universe>
-   <Universe Name="Universe 3" ID="2"/>
-   <Universe Name="Universe 4" ID="3"/>
+   <Universe Name="Universe 3" ID="2">
+    <Input Plugin="ArtNet" Line="1"/>
+    <Output Plugin="ArtNet" Line="1"/>
+   </Universe>
+   <Universe Name="Universe 4" ID="3">
+    <Input Plugin="ArtNet" Line="1"/>
+    <Output Plugin="ArtNet" Line="1"/>
+   </Universe>
   </InputOutputMap>
   <Fixture>
    <Manufacturer>Generic</Manufacturer>
@@ -1030,17 +1038,39 @@
    <Head X="88" Y="0" Fixture="88">0</Head>
    <Head X="89" Y="0" Fixture="89">0</Head>
   </FixtureGroup>
+  <Function ID="0" Type="Scene" Name="New Scene 0">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  </Function>
   <Function ID="1" Type="RGBMatrix" Name="Kit">
-   <Speed FadeIn="15" FadeOut="15" Duration="65"/>
+   <Speed FadeIn="10" FadeOut="10" Duration="30"/>
    <Direction>Forward</Direction>
-   <RunOrder>PingPong</RunOrder>
+   <RunOrder>Loop</RunOrder>
    <Algorithm Type="Script">Waves</Algorithm>
    <DimmerControl>1</DimmerControl>
    <MonoColor>4294901760</MonoColor>
    <EndColor>4278190080</EndColor>
    <FixtureGroup>2</FixtureGroup>
-   <Property Name="taillength" Value="20"/>
    <Property Name="tailfade" Value="Yes"/>
+   <Property Name="taillength" Value="20"/>
+  </Function>
+  <Function ID="2" Type="RGBMatrix" Name="ColdPulsFromMiddle">
+   <Speed FadeIn="0" FadeOut="0" Duration="30"/>
+   <Direction>Forward</Direction>
+   <RunOrder>PingPong</RunOrder>
+   <Algorithm Type="Script">Fill From Center</Algorithm>
+   <DimmerControl>1</DimmerControl>
+   <MonoColor>4280306311</MonoColor>
+   <FixtureGroup>2</FixtureGroup>
+  </Function>
+  <Function ID="3" Type="RGBMatrix" Name="RainbowPulses" BlendMode="Additive">
+   <Speed FadeIn="0" FadeOut="0" Duration="20"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Gradient</Algorithm>
+   <DimmerControl>1</DimmerControl>
+   <MonoColor>4294967295</MonoColor>
+   <FixtureGroup>2</FixtureGroup>
+   <Property Name="presetSize" Value="5"/>
   </Function>
   <Function ID="4" Type="RGBMatrix" Name="SingleLedRainbow">
    <Speed FadeIn="20" FadeOut="20" Duration="520"/>
@@ -1052,14 +1082,15 @@
    <FixtureGroup>1</FixtureGroup>
    <Property Name="presetSize" Value="18"/>
   </Function>
-  <Function ID="6" Type="RGBMatrix" Name="New RGB Matrix 6" BlendMode="Additive">
+  <Function ID="6" Type="RGBMatrix" Name="Rainbow" BlendMode="Additive">
    <Speed FadeIn="0" FadeOut="0" Duration="500"/>
    <Direction>Forward</Direction>
    <RunOrder>PingPong</RunOrder>
-   <Algorithm Type="Script">Even/Odd</Algorithm>
+   <Algorithm Type="Script">Gradient</Algorithm>
    <DimmerControl>1</DimmerControl>
    <MonoColor>4294901760</MonoColor>
-   <FixtureGroup>4294967295</FixtureGroup>
+   <FixtureGroup>2</FixtureGroup>
+   <Property Name="presetSize" Value="30"/>
   </Function>
   <Monitor DisplayMode="0" ShowLabels="0">
    <Font>Arial,12,-1,5,50,0,0,0,0,0</Font>
@@ -1371,7 +1402,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="390" Y="5" Width="390" Height="470"/>
+    <WindowState Visible="True" X="390" Y="0" Width="390" Height="470"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -1388,6 +1419,19 @@
       <Font>Default</Font>
      </Appearance>
      <Function ID="1"/>
+     <Action>Toggle</Action>
+     <Intensity Adjust="False">100</Intensity>
+    </Button>
+    <Button Caption="Cold pulse" ID="1" Icon="">
+     <WindowState Visible="True" X="100" Y="45" Width="75" Height="35"/>
+     <Appearance>
+      <FrameStyle>None</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <Function ID="2"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
     </Button>
@@ -1436,6 +1480,49 @@
      </Playback>
     </Slider>
    </Frame>
+   <Button Caption="Button 0" ID="0" Icon="">
+    <WindowState Visible="True" X="1015" Y="145" Width="50" Height="50"/>
+    <Appearance>
+     <FrameStyle>None</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <Function ID="4294967295"/>
+    <Action>Toggle</Action>
+    <Intensity Adjust="False">100</Intensity>
+   </Button>
+   <Slider Caption="Rainbow" ID="6" WidgetStyle="Slider" InvertedAppearance="false">
+    <WindowState Visible="True" X="580" Y="50" Width="60" Height="200"/>
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None">Playback</SliderMode>
+    <Level LowLimit="0" HighLimit="255" Value="0"/>
+    <Playback>
+     <Function>6</Function>
+    </Playback>
+   </Slider>
+   <Slider Caption="Rainbow pulses" ID="9" WidgetStyle="Slider" InvertedAppearance="false">
+    <WindowState Visible="True" X="650" Y="50" Width="60" Height="200"/>
+    <Appearance>
+     <FrameStyle>Sunken</FrameStyle>
+     <ForegroundColor>Default</ForegroundColor>
+     <BackgroundColor>Default</BackgroundColor>
+     <BackgroundImage>None</BackgroundImage>
+     <Font>Default</Font>
+    </Appearance>
+    <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None">Playback</SliderMode>
+    <Level LowLimit="0" HighLimit="255" Value="0"/>
+    <Playback>
+     <Function>3</Function>
+    </Playback>
+   </Slider>
   </Frame>
   <Properties>
    <Size Width="1920" Height="1080"/>
