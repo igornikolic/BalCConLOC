@@ -93,22 +93,31 @@ void initTest()
   for (int i = 0 ; i < numLeds ; i++) {
     leds[i] = CRGB(127, 0, 0);
   }
+  
   FastLED.show();
+  Serial.println("Red");
+
   delay(500);
   for (int i = 0 ; i < numLeds ; i++) {
     leds[i] = CRGB(0, 127, 0);
   }
   FastLED.show();
+  Serial.println("Green");
+  
   delay(500);
   for (int i = 0 ; i < numLeds ; i++) {
     leds[i] = CRGB(0, 0, 127);
   }
   FastLED.show();
+  Serial.println("Blue");
+
   delay(500);
   for (int i = 0 ; i < numLeds ; i++) {
     leds[i] = CRGB(0, 0, 0);
   }
   FastLED.show();
+  Serial.println("Black");
+
 }
 
 void onDmxFrame(uint16_t universe, uint16_t length, uint8_t sequence, uint8_t* data)

@@ -4,7 +4,7 @@
  <Creator>
   <Name>Q Light Controller Plus</Name>
   <Version>4.12.1</Version>
-  <Author>artnet</Author>
+  <Author>Igor Nikolic</Author>
  </Creator>
  <Engine>
   <InputOutputMap>
@@ -1044,7 +1044,7 @@
   <Function ID="1" Type="RGBMatrix" Name="Kit">
    <Speed FadeIn="10" FadeOut="10" Duration="30"/>
    <Direction>Forward</Direction>
-   <RunOrder>Loop</RunOrder>
+   <RunOrder>PingPong</RunOrder>
    <Algorithm Type="Script">Waves</Algorithm>
    <DimmerControl>1</DimmerControl>
    <MonoColor>4294901760</MonoColor>
@@ -1082,6 +1082,15 @@
    <FixtureGroup>1</FixtureGroup>
    <Property Name="presetSize" Value="18"/>
   </Function>
+  <Function ID="5" Type="RGBMatrix" Name="Strobe" BlendMode="Mask">
+   <Speed FadeIn="20" FadeOut="20" Duration="120"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Strobe</Algorithm>
+   <DimmerControl>1</DimmerControl>
+   <MonoColor>4294967295</MonoColor>
+   <FixtureGroup>2</FixtureGroup>
+  </Function>
   <Function ID="6" Type="RGBMatrix" Name="Rainbow" BlendMode="Additive">
    <Speed FadeIn="0" FadeOut="0" Duration="500"/>
    <Direction>Forward</Direction>
@@ -1092,10 +1101,142 @@
    <FixtureGroup>2</FixtureGroup>
    <Property Name="presetSize" Value="30"/>
   </Function>
+  <Function ID="7" Type="Scene" Name="strip" Hidden="True">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <FixtureVal ID="0">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="1">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="2">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="3">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="4">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="5">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="6">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="7">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="8">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="9">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="10">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="11">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="12">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="13">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="14">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="15">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="16">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="17">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="18">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="19">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="20">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="21">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="22">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="23">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="24">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="25">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="26">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="27">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="28">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="29">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="30">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="31">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="32">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="33">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="34">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="35">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="36">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="37">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="38">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="39">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="40">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="41">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="42">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="43">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="44">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="45">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="46">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="47">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="48">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="49">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="50">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="51">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="52">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="53">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="54">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="55">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="56">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="57">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="58">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="59">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="60">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="61">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="62">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="63">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="64">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="65">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="66">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="67">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="68">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="69">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="70">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="71">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="72">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="73">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="74">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="75">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="76">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="77">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="78">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="79">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="80">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="81">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="82">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="83">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="84">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="85">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="86">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="87">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="88">0,0,1,0,2,0</FixtureVal>
+   <FixtureVal ID="89">0,0,1,0,2,0</FixtureVal>
+  </Function>
+  <Function ID="8" Type="Sequence" Name="Strobe Sequence" BoundScene="7">
+   <Speed FadeIn="0" FadeOut="0" Duration="200"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Default" FadeOut="Default" Duration="PerStep"/>
+   <Step Number="0" FadeIn="0" Hold="200" FadeOut="0" Values="270">0:0,255,1,255,2,255:1:0,255,1,255,2,255:2:0,255,1,255,2,255:3:0,255,1,255,2,255:4:0,255,1,255,2,255:5:0,255,1,255,2,255:6:0,255,1,255,2,255:7:0,255,1,255,2,255:8:0,255,1,255,2,255:9:0,255,1,255,2,255:10:0,255,1,255,2,255:11:0,255,1,255,2,255:12:0,255,1,255,2,255:13:0,255,1,255,2,255:14:0,255,1,255,2,255:15:0,255,1,255,2,255:16:0,255,1,255,2,255:17:0,255,1,255,2,255:18:0,255,1,255,2,255:19:0,255,1,255,2,255:20:0,255,1,255,2,255:21:0,255,1,255,2,255:22:0,255,1,255,2,255:23:0,255,1,255,2,255:24:0,255,1,255,2,255:25:0,255,1,255,2,255:26:0,255,1,255,2,255:27:0,255,1,255,2,255:28:0,255,1,255,2,255:29:0,255,1,255,2,255:30:0,255,1,255,2,255:31:0,255,1,255,2,255:32:0,255,1,255,2,255:33:0,255,1,255,2,255:34:0,255,1,255,2,255:35:0,255,1,255,2,255:36:0,255,1,255,2,255:37:0,255,1,255,2,255:38:0,255,1,255,2,255:39:0,255,1,255,2,255:40:0,255,1,255,2,255:41:0,255,1,255,2,255:42:0,255,1,255,2,255:43:0,255,1,255,2,255:44:0,255,1,255,2,255:45:0,255,1,255,2,255:46:0,255,1,255,2,255:47:0,255,1,255,2,255:48:0,255,1,255,2,255:49:0,255,1,255,2,255:50:0,255,1,255,2,255:51:0,255,1,255,2,255:52:0,255,1,255,2,255:53:0,255,1,255,2,255:54:0,255,1,255,2,255:55:0,255,1,255,2,255:56:0,255,1,255,2,255:57:0,255,1,255,2,255:58:0,255,1,255,2,255:59:0,255,1,255,2,255:60:0,255,1,255,2,255:61:0,255,1,255,2,255:62:0,255,1,255,2,255:63:0,255,1,255,2,255:64:0,255,1,255,2,255:65:0,255,1,255,2,255:66:0,255,1,255,2,255:67:0,255,1,255,2,255:68:0,255,1,255,2,255:69:0,255,1,255,2,255:70:0,255,1,255,2,255:71:0,255,1,255,2,255:72:0,255,1,255,2,255:73:0,255,1,255,2,255:74:0,255,1,255,2,255:75:0,255,1,255,2,255:76:0,255,1,255,2,255:77:0,255,1,255,2,255:78:0,255,1,255,2,255:79:0,255,1,255,2,255:80:0,255,1,255,2,255:81:0,255,1,255,2,255:82:0,255,1,255,2,255:83:0,255,1,255,2,255:84:0,255,1,255,2,255:85:0,255,1,255,2,255:86:0,255,1,255,2,255:87:0,255,1,255,2,255:88:0,255,1,255,2,255:89:0,255,1,255,2,255</Step>
+   <Step Number="1" FadeIn="0" Hold="200" FadeOut="0" Values="270"/>
+  </Function>
+  <Function ID="9" Type="RGBMatrix" Name="Bounce">
+   <Speed FadeIn="30" FadeOut="30" Duration="50"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Balls (Colors)</Algorithm>
+   <DimmerControl>1</DimmerControl>
+   <MonoColor>4285780502</MonoColor>
+   <FixtureGroup>2</FixtureGroup>
+   <Property Name="color3Index" Value="Green"/>
+   <Property Name="presetCollision" Value="Yes"/>
+   <Property Name="color2Index" Value="Red"/>
+   <Property Name="presetNumber" Value="5"/>
+   <Property Name="color4Index" Value="Blue"/>
+   <Property Name="presetSize" Value="5"/>
+   <Property Name="color5Index" Value="Orange"/>
+  </Function>
+  <Function ID="10" Type="RGBMatrix" Name="Datastream" BlendMode="Additive">
+   <Speed FadeIn="0" FadeOut="0" Duration="500"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <Algorithm Type="Script">Noise</Algorithm>
+   <DimmerControl>1</DimmerControl>
+   <MonoColor>4283341318</MonoColor>
+   <FixtureGroup>2</FixtureGroup>
+   <Property Name="noisePercentage" Value="Low"/>
+  </Function>
+  <Function ID="11" Type="Script" Name="New Script 11">
+   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+  </Function>
   <Monitor DisplayMode="0" ShowLabels="0">
    <Font>Arial,12,-1,5,50,0,0,0,0,0</Font>
    <ChannelStyle>0</ChannelStyle>
-   <ValueStyle>0</ValueStyle>
+   <ValueStyle>1</ValueStyle>
    <Grid Width="5" Height="3" Depth="5" Units="0"/>
   </Monitor>
  </Engine>
@@ -1108,292 +1249,6 @@
     <BackgroundImage>None</BackgroundImage>
     <Font>Default</Font>
    </Appearance>
-   <Slider Caption="White" ID="2" WidgetStyle="Slider" InvertedAppearance="false">
-    <WindowState Visible="True" X="795" Y="15" Width="60" Height="455"/>
-    <Appearance>
-     <FrameStyle>Sunken</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None" Monitor="false">Level</SliderMode>
-    <Level LowLimit="0" HighLimit="255" Value="0">
-     <Channel Fixture="0">0</Channel>
-     <Channel Fixture="0">1</Channel>
-     <Channel Fixture="0">2</Channel>
-     <Channel Fixture="1">0</Channel>
-     <Channel Fixture="1">1</Channel>
-     <Channel Fixture="1">2</Channel>
-     <Channel Fixture="2">0</Channel>
-     <Channel Fixture="2">1</Channel>
-     <Channel Fixture="2">2</Channel>
-     <Channel Fixture="3">0</Channel>
-     <Channel Fixture="3">1</Channel>
-     <Channel Fixture="3">2</Channel>
-     <Channel Fixture="4">0</Channel>
-     <Channel Fixture="4">1</Channel>
-     <Channel Fixture="4">2</Channel>
-     <Channel Fixture="5">0</Channel>
-     <Channel Fixture="5">1</Channel>
-     <Channel Fixture="5">2</Channel>
-     <Channel Fixture="6">0</Channel>
-     <Channel Fixture="6">1</Channel>
-     <Channel Fixture="6">2</Channel>
-     <Channel Fixture="7">0</Channel>
-     <Channel Fixture="7">1</Channel>
-     <Channel Fixture="7">2</Channel>
-     <Channel Fixture="8">0</Channel>
-     <Channel Fixture="8">1</Channel>
-     <Channel Fixture="8">2</Channel>
-     <Channel Fixture="9">0</Channel>
-     <Channel Fixture="9">1</Channel>
-     <Channel Fixture="9">2</Channel>
-     <Channel Fixture="10">0</Channel>
-     <Channel Fixture="10">1</Channel>
-     <Channel Fixture="10">2</Channel>
-     <Channel Fixture="11">0</Channel>
-     <Channel Fixture="11">1</Channel>
-     <Channel Fixture="11">2</Channel>
-     <Channel Fixture="12">0</Channel>
-     <Channel Fixture="12">1</Channel>
-     <Channel Fixture="12">2</Channel>
-     <Channel Fixture="13">0</Channel>
-     <Channel Fixture="13">1</Channel>
-     <Channel Fixture="13">2</Channel>
-     <Channel Fixture="14">0</Channel>
-     <Channel Fixture="14">1</Channel>
-     <Channel Fixture="14">2</Channel>
-     <Channel Fixture="15">0</Channel>
-     <Channel Fixture="15">1</Channel>
-     <Channel Fixture="15">2</Channel>
-     <Channel Fixture="16">0</Channel>
-     <Channel Fixture="16">1</Channel>
-     <Channel Fixture="16">2</Channel>
-     <Channel Fixture="17">0</Channel>
-     <Channel Fixture="17">1</Channel>
-     <Channel Fixture="17">2</Channel>
-     <Channel Fixture="18">0</Channel>
-     <Channel Fixture="18">1</Channel>
-     <Channel Fixture="18">2</Channel>
-     <Channel Fixture="19">0</Channel>
-     <Channel Fixture="19">1</Channel>
-     <Channel Fixture="19">2</Channel>
-     <Channel Fixture="20">0</Channel>
-     <Channel Fixture="20">1</Channel>
-     <Channel Fixture="20">2</Channel>
-     <Channel Fixture="21">0</Channel>
-     <Channel Fixture="21">1</Channel>
-     <Channel Fixture="21">2</Channel>
-     <Channel Fixture="22">0</Channel>
-     <Channel Fixture="22">1</Channel>
-     <Channel Fixture="22">2</Channel>
-     <Channel Fixture="23">0</Channel>
-     <Channel Fixture="23">1</Channel>
-     <Channel Fixture="23">2</Channel>
-     <Channel Fixture="24">0</Channel>
-     <Channel Fixture="24">1</Channel>
-     <Channel Fixture="24">2</Channel>
-     <Channel Fixture="25">0</Channel>
-     <Channel Fixture="25">1</Channel>
-     <Channel Fixture="25">2</Channel>
-     <Channel Fixture="26">0</Channel>
-     <Channel Fixture="26">1</Channel>
-     <Channel Fixture="26">2</Channel>
-     <Channel Fixture="27">0</Channel>
-     <Channel Fixture="27">1</Channel>
-     <Channel Fixture="27">2</Channel>
-     <Channel Fixture="28">0</Channel>
-     <Channel Fixture="28">1</Channel>
-     <Channel Fixture="28">2</Channel>
-     <Channel Fixture="29">0</Channel>
-     <Channel Fixture="29">1</Channel>
-     <Channel Fixture="29">2</Channel>
-     <Channel Fixture="30">0</Channel>
-     <Channel Fixture="30">1</Channel>
-     <Channel Fixture="30">2</Channel>
-     <Channel Fixture="31">0</Channel>
-     <Channel Fixture="31">1</Channel>
-     <Channel Fixture="31">2</Channel>
-     <Channel Fixture="32">0</Channel>
-     <Channel Fixture="32">1</Channel>
-     <Channel Fixture="32">2</Channel>
-     <Channel Fixture="33">0</Channel>
-     <Channel Fixture="33">1</Channel>
-     <Channel Fixture="33">2</Channel>
-     <Channel Fixture="34">0</Channel>
-     <Channel Fixture="34">1</Channel>
-     <Channel Fixture="34">2</Channel>
-     <Channel Fixture="35">0</Channel>
-     <Channel Fixture="35">1</Channel>
-     <Channel Fixture="35">2</Channel>
-     <Channel Fixture="36">0</Channel>
-     <Channel Fixture="36">1</Channel>
-     <Channel Fixture="36">2</Channel>
-     <Channel Fixture="37">0</Channel>
-     <Channel Fixture="37">1</Channel>
-     <Channel Fixture="37">2</Channel>
-     <Channel Fixture="38">0</Channel>
-     <Channel Fixture="38">1</Channel>
-     <Channel Fixture="38">2</Channel>
-     <Channel Fixture="39">0</Channel>
-     <Channel Fixture="39">1</Channel>
-     <Channel Fixture="39">2</Channel>
-     <Channel Fixture="40">0</Channel>
-     <Channel Fixture="40">1</Channel>
-     <Channel Fixture="40">2</Channel>
-     <Channel Fixture="41">0</Channel>
-     <Channel Fixture="41">1</Channel>
-     <Channel Fixture="41">2</Channel>
-     <Channel Fixture="42">0</Channel>
-     <Channel Fixture="42">1</Channel>
-     <Channel Fixture="42">2</Channel>
-     <Channel Fixture="43">0</Channel>
-     <Channel Fixture="43">1</Channel>
-     <Channel Fixture="43">2</Channel>
-     <Channel Fixture="44">0</Channel>
-     <Channel Fixture="44">1</Channel>
-     <Channel Fixture="44">2</Channel>
-     <Channel Fixture="45">0</Channel>
-     <Channel Fixture="45">1</Channel>
-     <Channel Fixture="45">2</Channel>
-     <Channel Fixture="46">0</Channel>
-     <Channel Fixture="46">1</Channel>
-     <Channel Fixture="46">2</Channel>
-     <Channel Fixture="47">0</Channel>
-     <Channel Fixture="47">1</Channel>
-     <Channel Fixture="47">2</Channel>
-     <Channel Fixture="48">0</Channel>
-     <Channel Fixture="48">1</Channel>
-     <Channel Fixture="48">2</Channel>
-     <Channel Fixture="49">0</Channel>
-     <Channel Fixture="49">1</Channel>
-     <Channel Fixture="49">2</Channel>
-     <Channel Fixture="50">0</Channel>
-     <Channel Fixture="50">1</Channel>
-     <Channel Fixture="50">2</Channel>
-     <Channel Fixture="51">0</Channel>
-     <Channel Fixture="51">1</Channel>
-     <Channel Fixture="51">2</Channel>
-     <Channel Fixture="52">0</Channel>
-     <Channel Fixture="52">1</Channel>
-     <Channel Fixture="52">2</Channel>
-     <Channel Fixture="53">0</Channel>
-     <Channel Fixture="53">1</Channel>
-     <Channel Fixture="53">2</Channel>
-     <Channel Fixture="54">0</Channel>
-     <Channel Fixture="54">1</Channel>
-     <Channel Fixture="54">2</Channel>
-     <Channel Fixture="55">0</Channel>
-     <Channel Fixture="55">1</Channel>
-     <Channel Fixture="55">2</Channel>
-     <Channel Fixture="56">0</Channel>
-     <Channel Fixture="56">1</Channel>
-     <Channel Fixture="56">2</Channel>
-     <Channel Fixture="57">0</Channel>
-     <Channel Fixture="57">1</Channel>
-     <Channel Fixture="57">2</Channel>
-     <Channel Fixture="58">0</Channel>
-     <Channel Fixture="58">1</Channel>
-     <Channel Fixture="58">2</Channel>
-     <Channel Fixture="59">0</Channel>
-     <Channel Fixture="59">1</Channel>
-     <Channel Fixture="59">2</Channel>
-     <Channel Fixture="60">0</Channel>
-     <Channel Fixture="60">1</Channel>
-     <Channel Fixture="60">2</Channel>
-     <Channel Fixture="61">0</Channel>
-     <Channel Fixture="61">1</Channel>
-     <Channel Fixture="61">2</Channel>
-     <Channel Fixture="62">0</Channel>
-     <Channel Fixture="62">1</Channel>
-     <Channel Fixture="62">2</Channel>
-     <Channel Fixture="63">0</Channel>
-     <Channel Fixture="63">1</Channel>
-     <Channel Fixture="63">2</Channel>
-     <Channel Fixture="64">0</Channel>
-     <Channel Fixture="64">1</Channel>
-     <Channel Fixture="64">2</Channel>
-     <Channel Fixture="65">0</Channel>
-     <Channel Fixture="65">1</Channel>
-     <Channel Fixture="65">2</Channel>
-     <Channel Fixture="66">0</Channel>
-     <Channel Fixture="66">1</Channel>
-     <Channel Fixture="66">2</Channel>
-     <Channel Fixture="67">0</Channel>
-     <Channel Fixture="67">1</Channel>
-     <Channel Fixture="67">2</Channel>
-     <Channel Fixture="68">0</Channel>
-     <Channel Fixture="68">1</Channel>
-     <Channel Fixture="68">2</Channel>
-     <Channel Fixture="69">0</Channel>
-     <Channel Fixture="69">1</Channel>
-     <Channel Fixture="69">2</Channel>
-     <Channel Fixture="70">0</Channel>
-     <Channel Fixture="70">1</Channel>
-     <Channel Fixture="70">2</Channel>
-     <Channel Fixture="71">0</Channel>
-     <Channel Fixture="71">1</Channel>
-     <Channel Fixture="71">2</Channel>
-     <Channel Fixture="72">0</Channel>
-     <Channel Fixture="72">1</Channel>
-     <Channel Fixture="72">2</Channel>
-     <Channel Fixture="73">0</Channel>
-     <Channel Fixture="73">1</Channel>
-     <Channel Fixture="73">2</Channel>
-     <Channel Fixture="74">0</Channel>
-     <Channel Fixture="74">1</Channel>
-     <Channel Fixture="74">2</Channel>
-     <Channel Fixture="75">0</Channel>
-     <Channel Fixture="75">1</Channel>
-     <Channel Fixture="75">2</Channel>
-     <Channel Fixture="76">0</Channel>
-     <Channel Fixture="76">1</Channel>
-     <Channel Fixture="76">2</Channel>
-     <Channel Fixture="77">0</Channel>
-     <Channel Fixture="77">1</Channel>
-     <Channel Fixture="77">2</Channel>
-     <Channel Fixture="78">0</Channel>
-     <Channel Fixture="78">1</Channel>
-     <Channel Fixture="78">2</Channel>
-     <Channel Fixture="79">0</Channel>
-     <Channel Fixture="79">1</Channel>
-     <Channel Fixture="79">2</Channel>
-     <Channel Fixture="80">0</Channel>
-     <Channel Fixture="80">1</Channel>
-     <Channel Fixture="80">2</Channel>
-     <Channel Fixture="81">0</Channel>
-     <Channel Fixture="81">1</Channel>
-     <Channel Fixture="81">2</Channel>
-     <Channel Fixture="82">0</Channel>
-     <Channel Fixture="82">1</Channel>
-     <Channel Fixture="82">2</Channel>
-     <Channel Fixture="83">0</Channel>
-     <Channel Fixture="83">1</Channel>
-     <Channel Fixture="83">2</Channel>
-     <Channel Fixture="84">0</Channel>
-     <Channel Fixture="84">1</Channel>
-     <Channel Fixture="84">2</Channel>
-     <Channel Fixture="85">0</Channel>
-     <Channel Fixture="85">1</Channel>
-     <Channel Fixture="85">2</Channel>
-     <Channel Fixture="86">0</Channel>
-     <Channel Fixture="86">1</Channel>
-     <Channel Fixture="86">2</Channel>
-     <Channel Fixture="87">0</Channel>
-     <Channel Fixture="87">1</Channel>
-     <Channel Fixture="87">2</Channel>
-     <Channel Fixture="88">0</Channel>
-     <Channel Fixture="88">1</Channel>
-     <Channel Fixture="88">2</Channel>
-     <Channel Fixture="89">0</Channel>
-     <Channel Fixture="89">1</Channel>
-     <Channel Fixture="89">2</Channel>
-    </Level>
-    <Playback>
-     <Function>4294967295</Function>
-    </Playback>
-   </Slider>
    <Frame Caption="Programmable LEDs" ID="3">
     <Appearance>
      <FrameStyle>Sunken</FrameStyle>
@@ -1402,15 +1257,364 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="390" Y="0" Width="390" Height="470"/>
+    <WindowState Visible="True" X="860" Y="0" Width="840" Height="600"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
     <ShowEnableButton>True</ShowEnableButton>
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
-    <Button Caption="kit effect" ID="4" Icon="">
-     <WindowState Visible="True" X="20" Y="45" Width="75" Height="35"/>
+    <Slider Caption="Kit" ID="1" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="10" Y="50" Width="60" Height="220"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None">Playback</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0"/>
+     <Playback>
+      <Function>1</Function>
+     </Playback>
+    </Slider>
+    <Slider Caption="Rainbow cycle" ID="4" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="70" Y="50" Width="70" Height="220"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None">Playback</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0"/>
+     <Playback>
+      <Function>6</Function>
+     </Playback>
+    </Slider>
+    <Slider Caption="Rainbow pulses" ID="6" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="145" Y="50" Width="70" Height="220"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None">Playback</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0"/>
+     <Playback>
+      <Function>3</Function>
+     </Playback>
+    </Slider>
+    <Slider Caption="Blue pulse" ID="9" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="225" Y="50" Width="55" Height="220"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None">Playback</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0"/>
+     <Playback>
+      <Function>2</Function>
+     </Playback>
+    </Slider>
+    <Slider Caption="White" ID="10" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="770" Y="40" Width="55" Height="415"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="130" Value="0">
+      <Channel Fixture="0">0</Channel>
+      <Channel Fixture="0">1</Channel>
+      <Channel Fixture="0">2</Channel>
+      <Channel Fixture="1">0</Channel>
+      <Channel Fixture="1">1</Channel>
+      <Channel Fixture="1">2</Channel>
+      <Channel Fixture="2">0</Channel>
+      <Channel Fixture="2">1</Channel>
+      <Channel Fixture="2">2</Channel>
+      <Channel Fixture="3">0</Channel>
+      <Channel Fixture="3">1</Channel>
+      <Channel Fixture="3">2</Channel>
+      <Channel Fixture="4">0</Channel>
+      <Channel Fixture="4">1</Channel>
+      <Channel Fixture="4">2</Channel>
+      <Channel Fixture="5">0</Channel>
+      <Channel Fixture="5">1</Channel>
+      <Channel Fixture="5">2</Channel>
+      <Channel Fixture="6">0</Channel>
+      <Channel Fixture="6">1</Channel>
+      <Channel Fixture="6">2</Channel>
+      <Channel Fixture="7">0</Channel>
+      <Channel Fixture="7">1</Channel>
+      <Channel Fixture="7">2</Channel>
+      <Channel Fixture="8">0</Channel>
+      <Channel Fixture="8">1</Channel>
+      <Channel Fixture="8">2</Channel>
+      <Channel Fixture="9">0</Channel>
+      <Channel Fixture="9">1</Channel>
+      <Channel Fixture="9">2</Channel>
+      <Channel Fixture="10">0</Channel>
+      <Channel Fixture="10">1</Channel>
+      <Channel Fixture="10">2</Channel>
+      <Channel Fixture="11">0</Channel>
+      <Channel Fixture="11">1</Channel>
+      <Channel Fixture="11">2</Channel>
+      <Channel Fixture="12">0</Channel>
+      <Channel Fixture="12">1</Channel>
+      <Channel Fixture="12">2</Channel>
+      <Channel Fixture="13">0</Channel>
+      <Channel Fixture="13">1</Channel>
+      <Channel Fixture="13">2</Channel>
+      <Channel Fixture="14">0</Channel>
+      <Channel Fixture="14">1</Channel>
+      <Channel Fixture="14">2</Channel>
+      <Channel Fixture="15">0</Channel>
+      <Channel Fixture="15">1</Channel>
+      <Channel Fixture="15">2</Channel>
+      <Channel Fixture="16">0</Channel>
+      <Channel Fixture="16">1</Channel>
+      <Channel Fixture="16">2</Channel>
+      <Channel Fixture="17">0</Channel>
+      <Channel Fixture="17">1</Channel>
+      <Channel Fixture="17">2</Channel>
+      <Channel Fixture="18">0</Channel>
+      <Channel Fixture="18">1</Channel>
+      <Channel Fixture="18">2</Channel>
+      <Channel Fixture="19">0</Channel>
+      <Channel Fixture="19">1</Channel>
+      <Channel Fixture="19">2</Channel>
+      <Channel Fixture="20">0</Channel>
+      <Channel Fixture="20">1</Channel>
+      <Channel Fixture="20">2</Channel>
+      <Channel Fixture="21">0</Channel>
+      <Channel Fixture="21">1</Channel>
+      <Channel Fixture="21">2</Channel>
+      <Channel Fixture="22">0</Channel>
+      <Channel Fixture="22">1</Channel>
+      <Channel Fixture="22">2</Channel>
+      <Channel Fixture="23">0</Channel>
+      <Channel Fixture="23">1</Channel>
+      <Channel Fixture="23">2</Channel>
+      <Channel Fixture="24">0</Channel>
+      <Channel Fixture="24">1</Channel>
+      <Channel Fixture="24">2</Channel>
+      <Channel Fixture="25">0</Channel>
+      <Channel Fixture="25">1</Channel>
+      <Channel Fixture="25">2</Channel>
+      <Channel Fixture="26">0</Channel>
+      <Channel Fixture="26">1</Channel>
+      <Channel Fixture="26">2</Channel>
+      <Channel Fixture="27">0</Channel>
+      <Channel Fixture="27">1</Channel>
+      <Channel Fixture="27">2</Channel>
+      <Channel Fixture="28">0</Channel>
+      <Channel Fixture="28">1</Channel>
+      <Channel Fixture="28">2</Channel>
+      <Channel Fixture="29">0</Channel>
+      <Channel Fixture="29">1</Channel>
+      <Channel Fixture="29">2</Channel>
+      <Channel Fixture="30">0</Channel>
+      <Channel Fixture="30">1</Channel>
+      <Channel Fixture="30">2</Channel>
+      <Channel Fixture="31">0</Channel>
+      <Channel Fixture="31">1</Channel>
+      <Channel Fixture="31">2</Channel>
+      <Channel Fixture="32">0</Channel>
+      <Channel Fixture="32">1</Channel>
+      <Channel Fixture="32">2</Channel>
+      <Channel Fixture="33">0</Channel>
+      <Channel Fixture="33">1</Channel>
+      <Channel Fixture="33">2</Channel>
+      <Channel Fixture="34">0</Channel>
+      <Channel Fixture="34">1</Channel>
+      <Channel Fixture="34">2</Channel>
+      <Channel Fixture="35">0</Channel>
+      <Channel Fixture="35">1</Channel>
+      <Channel Fixture="35">2</Channel>
+      <Channel Fixture="36">0</Channel>
+      <Channel Fixture="36">1</Channel>
+      <Channel Fixture="36">2</Channel>
+      <Channel Fixture="37">0</Channel>
+      <Channel Fixture="37">1</Channel>
+      <Channel Fixture="37">2</Channel>
+      <Channel Fixture="38">0</Channel>
+      <Channel Fixture="38">1</Channel>
+      <Channel Fixture="38">2</Channel>
+      <Channel Fixture="39">0</Channel>
+      <Channel Fixture="39">1</Channel>
+      <Channel Fixture="39">2</Channel>
+      <Channel Fixture="40">0</Channel>
+      <Channel Fixture="40">1</Channel>
+      <Channel Fixture="40">2</Channel>
+      <Channel Fixture="41">0</Channel>
+      <Channel Fixture="41">1</Channel>
+      <Channel Fixture="41">2</Channel>
+      <Channel Fixture="42">0</Channel>
+      <Channel Fixture="42">1</Channel>
+      <Channel Fixture="42">2</Channel>
+      <Channel Fixture="43">0</Channel>
+      <Channel Fixture="43">1</Channel>
+      <Channel Fixture="43">2</Channel>
+      <Channel Fixture="44">0</Channel>
+      <Channel Fixture="44">1</Channel>
+      <Channel Fixture="44">2</Channel>
+      <Channel Fixture="45">0</Channel>
+      <Channel Fixture="45">1</Channel>
+      <Channel Fixture="45">2</Channel>
+      <Channel Fixture="46">0</Channel>
+      <Channel Fixture="46">1</Channel>
+      <Channel Fixture="46">2</Channel>
+      <Channel Fixture="47">0</Channel>
+      <Channel Fixture="47">1</Channel>
+      <Channel Fixture="47">2</Channel>
+      <Channel Fixture="48">0</Channel>
+      <Channel Fixture="48">1</Channel>
+      <Channel Fixture="48">2</Channel>
+      <Channel Fixture="49">0</Channel>
+      <Channel Fixture="49">1</Channel>
+      <Channel Fixture="49">2</Channel>
+      <Channel Fixture="50">0</Channel>
+      <Channel Fixture="50">1</Channel>
+      <Channel Fixture="50">2</Channel>
+      <Channel Fixture="51">0</Channel>
+      <Channel Fixture="51">1</Channel>
+      <Channel Fixture="51">2</Channel>
+      <Channel Fixture="52">0</Channel>
+      <Channel Fixture="52">1</Channel>
+      <Channel Fixture="52">2</Channel>
+      <Channel Fixture="53">0</Channel>
+      <Channel Fixture="53">1</Channel>
+      <Channel Fixture="53">2</Channel>
+      <Channel Fixture="54">0</Channel>
+      <Channel Fixture="54">1</Channel>
+      <Channel Fixture="54">2</Channel>
+      <Channel Fixture="55">0</Channel>
+      <Channel Fixture="55">1</Channel>
+      <Channel Fixture="55">2</Channel>
+      <Channel Fixture="56">0</Channel>
+      <Channel Fixture="56">1</Channel>
+      <Channel Fixture="56">2</Channel>
+      <Channel Fixture="57">0</Channel>
+      <Channel Fixture="57">1</Channel>
+      <Channel Fixture="57">2</Channel>
+      <Channel Fixture="58">0</Channel>
+      <Channel Fixture="58">1</Channel>
+      <Channel Fixture="58">2</Channel>
+      <Channel Fixture="59">0</Channel>
+      <Channel Fixture="59">1</Channel>
+      <Channel Fixture="59">2</Channel>
+      <Channel Fixture="60">0</Channel>
+      <Channel Fixture="60">1</Channel>
+      <Channel Fixture="60">2</Channel>
+      <Channel Fixture="61">0</Channel>
+      <Channel Fixture="61">1</Channel>
+      <Channel Fixture="61">2</Channel>
+      <Channel Fixture="62">0</Channel>
+      <Channel Fixture="62">1</Channel>
+      <Channel Fixture="62">2</Channel>
+      <Channel Fixture="63">0</Channel>
+      <Channel Fixture="63">1</Channel>
+      <Channel Fixture="63">2</Channel>
+      <Channel Fixture="64">0</Channel>
+      <Channel Fixture="64">1</Channel>
+      <Channel Fixture="64">2</Channel>
+      <Channel Fixture="65">0</Channel>
+      <Channel Fixture="65">1</Channel>
+      <Channel Fixture="65">2</Channel>
+      <Channel Fixture="66">0</Channel>
+      <Channel Fixture="66">1</Channel>
+      <Channel Fixture="66">2</Channel>
+      <Channel Fixture="67">0</Channel>
+      <Channel Fixture="67">1</Channel>
+      <Channel Fixture="67">2</Channel>
+      <Channel Fixture="68">0</Channel>
+      <Channel Fixture="68">1</Channel>
+      <Channel Fixture="68">2</Channel>
+      <Channel Fixture="69">0</Channel>
+      <Channel Fixture="69">1</Channel>
+      <Channel Fixture="69">2</Channel>
+      <Channel Fixture="70">0</Channel>
+      <Channel Fixture="70">1</Channel>
+      <Channel Fixture="70">2</Channel>
+      <Channel Fixture="71">0</Channel>
+      <Channel Fixture="71">1</Channel>
+      <Channel Fixture="71">2</Channel>
+      <Channel Fixture="72">0</Channel>
+      <Channel Fixture="72">1</Channel>
+      <Channel Fixture="72">2</Channel>
+      <Channel Fixture="73">0</Channel>
+      <Channel Fixture="73">1</Channel>
+      <Channel Fixture="73">2</Channel>
+      <Channel Fixture="74">0</Channel>
+      <Channel Fixture="74">1</Channel>
+      <Channel Fixture="74">2</Channel>
+      <Channel Fixture="75">0</Channel>
+      <Channel Fixture="75">1</Channel>
+      <Channel Fixture="75">2</Channel>
+      <Channel Fixture="76">0</Channel>
+      <Channel Fixture="76">1</Channel>
+      <Channel Fixture="76">2</Channel>
+      <Channel Fixture="77">0</Channel>
+      <Channel Fixture="77">1</Channel>
+      <Channel Fixture="77">2</Channel>
+      <Channel Fixture="78">0</Channel>
+      <Channel Fixture="78">1</Channel>
+      <Channel Fixture="78">2</Channel>
+      <Channel Fixture="79">0</Channel>
+      <Channel Fixture="79">1</Channel>
+      <Channel Fixture="79">2</Channel>
+      <Channel Fixture="80">0</Channel>
+      <Channel Fixture="80">1</Channel>
+      <Channel Fixture="80">2</Channel>
+      <Channel Fixture="81">0</Channel>
+      <Channel Fixture="81">1</Channel>
+      <Channel Fixture="81">2</Channel>
+      <Channel Fixture="82">0</Channel>
+      <Channel Fixture="82">1</Channel>
+      <Channel Fixture="82">2</Channel>
+      <Channel Fixture="83">0</Channel>
+      <Channel Fixture="83">1</Channel>
+      <Channel Fixture="83">2</Channel>
+      <Channel Fixture="84">0</Channel>
+      <Channel Fixture="84">1</Channel>
+      <Channel Fixture="84">2</Channel>
+      <Channel Fixture="85">0</Channel>
+      <Channel Fixture="85">1</Channel>
+      <Channel Fixture="85">2</Channel>
+      <Channel Fixture="86">0</Channel>
+      <Channel Fixture="86">1</Channel>
+      <Channel Fixture="86">2</Channel>
+      <Channel Fixture="87">0</Channel>
+      <Channel Fixture="87">1</Channel>
+      <Channel Fixture="87">2</Channel>
+      <Channel Fixture="88">0</Channel>
+      <Channel Fixture="88">1</Channel>
+      <Channel Fixture="88">2</Channel>
+      <Channel Fixture="89">0</Channel>
+      <Channel Fixture="89">1</Channel>
+      <Channel Fixture="89">2</Channel>
+      <Channel Fixture="90">0</Channel>
+      <Channel Fixture="90">1</Channel>
+      <Channel Fixture="90">2</Channel>
+     </Level>
+     <Playback>
+      <Function>4294967295</Function>
+     </Playback>
+    </Slider>
+    <Button Caption="Strobe" ID="11" Icon="">
+     <WindowState Visible="True" X="775" Y="535" Width="50" Height="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1418,23 +1622,329 @@
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <Function ID="1"/>
+     <Function ID="5"/>
      <Action>Toggle</Action>
      <Intensity Adjust="False">100</Intensity>
     </Button>
-    <Button Caption="Cold pulse" ID="1" Icon="">
-     <WindowState Visible="True" X="100" Y="45" Width="75" Height="35"/>
+    <Slider Caption="Bounce" ID="12" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="285" Y="50" Width="60" Height="220"/>
      <Appearance>
-      <FrameStyle>None</FrameStyle>
+      <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
       <BackgroundColor>Default</BackgroundColor>
       <BackgroundImage>None</BackgroundImage>
       <Font>Default</Font>
      </Appearance>
-     <Function ID="2"/>
-     <Action>Toggle</Action>
-     <Intensity Adjust="False">100</Intensity>
-    </Button>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None">Playback</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0"/>
+     <Playback>
+      <Function>9</Function>
+     </Playback>
+    </Slider>
+    <Slider Caption="Single color" ID="0" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="680" Y="40" Width="90" Height="415"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="RGB" Monitor="false">Level</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0">
+      <Channel Fixture="0">0</Channel>
+      <Channel Fixture="0">1</Channel>
+      <Channel Fixture="0">2</Channel>
+      <Channel Fixture="1">0</Channel>
+      <Channel Fixture="1">1</Channel>
+      <Channel Fixture="1">2</Channel>
+      <Channel Fixture="2">0</Channel>
+      <Channel Fixture="2">1</Channel>
+      <Channel Fixture="2">2</Channel>
+      <Channel Fixture="3">0</Channel>
+      <Channel Fixture="3">1</Channel>
+      <Channel Fixture="3">2</Channel>
+      <Channel Fixture="4">0</Channel>
+      <Channel Fixture="4">1</Channel>
+      <Channel Fixture="4">2</Channel>
+      <Channel Fixture="5">0</Channel>
+      <Channel Fixture="5">1</Channel>
+      <Channel Fixture="5">2</Channel>
+      <Channel Fixture="6">0</Channel>
+      <Channel Fixture="6">1</Channel>
+      <Channel Fixture="6">2</Channel>
+      <Channel Fixture="7">0</Channel>
+      <Channel Fixture="7">1</Channel>
+      <Channel Fixture="7">2</Channel>
+      <Channel Fixture="8">0</Channel>
+      <Channel Fixture="8">1</Channel>
+      <Channel Fixture="8">2</Channel>
+      <Channel Fixture="9">0</Channel>
+      <Channel Fixture="9">1</Channel>
+      <Channel Fixture="9">2</Channel>
+      <Channel Fixture="10">0</Channel>
+      <Channel Fixture="10">1</Channel>
+      <Channel Fixture="10">2</Channel>
+      <Channel Fixture="11">0</Channel>
+      <Channel Fixture="11">1</Channel>
+      <Channel Fixture="11">2</Channel>
+      <Channel Fixture="12">0</Channel>
+      <Channel Fixture="12">1</Channel>
+      <Channel Fixture="12">2</Channel>
+      <Channel Fixture="13">0</Channel>
+      <Channel Fixture="13">1</Channel>
+      <Channel Fixture="13">2</Channel>
+      <Channel Fixture="14">0</Channel>
+      <Channel Fixture="14">1</Channel>
+      <Channel Fixture="14">2</Channel>
+      <Channel Fixture="15">0</Channel>
+      <Channel Fixture="15">1</Channel>
+      <Channel Fixture="15">2</Channel>
+      <Channel Fixture="16">0</Channel>
+      <Channel Fixture="16">1</Channel>
+      <Channel Fixture="16">2</Channel>
+      <Channel Fixture="17">0</Channel>
+      <Channel Fixture="17">1</Channel>
+      <Channel Fixture="17">2</Channel>
+      <Channel Fixture="18">0</Channel>
+      <Channel Fixture="18">1</Channel>
+      <Channel Fixture="18">2</Channel>
+      <Channel Fixture="19">0</Channel>
+      <Channel Fixture="19">1</Channel>
+      <Channel Fixture="19">2</Channel>
+      <Channel Fixture="20">0</Channel>
+      <Channel Fixture="20">1</Channel>
+      <Channel Fixture="20">2</Channel>
+      <Channel Fixture="21">0</Channel>
+      <Channel Fixture="21">1</Channel>
+      <Channel Fixture="21">2</Channel>
+      <Channel Fixture="22">0</Channel>
+      <Channel Fixture="22">1</Channel>
+      <Channel Fixture="22">2</Channel>
+      <Channel Fixture="23">0</Channel>
+      <Channel Fixture="23">1</Channel>
+      <Channel Fixture="23">2</Channel>
+      <Channel Fixture="24">0</Channel>
+      <Channel Fixture="24">1</Channel>
+      <Channel Fixture="24">2</Channel>
+      <Channel Fixture="25">0</Channel>
+      <Channel Fixture="25">1</Channel>
+      <Channel Fixture="25">2</Channel>
+      <Channel Fixture="26">0</Channel>
+      <Channel Fixture="26">1</Channel>
+      <Channel Fixture="26">2</Channel>
+      <Channel Fixture="27">0</Channel>
+      <Channel Fixture="27">1</Channel>
+      <Channel Fixture="27">2</Channel>
+      <Channel Fixture="28">0</Channel>
+      <Channel Fixture="28">1</Channel>
+      <Channel Fixture="28">2</Channel>
+      <Channel Fixture="29">0</Channel>
+      <Channel Fixture="29">1</Channel>
+      <Channel Fixture="29">2</Channel>
+      <Channel Fixture="30">0</Channel>
+      <Channel Fixture="30">1</Channel>
+      <Channel Fixture="30">2</Channel>
+      <Channel Fixture="31">0</Channel>
+      <Channel Fixture="31">1</Channel>
+      <Channel Fixture="31">2</Channel>
+      <Channel Fixture="32">0</Channel>
+      <Channel Fixture="32">1</Channel>
+      <Channel Fixture="32">2</Channel>
+      <Channel Fixture="33">0</Channel>
+      <Channel Fixture="33">1</Channel>
+      <Channel Fixture="33">2</Channel>
+      <Channel Fixture="34">0</Channel>
+      <Channel Fixture="34">1</Channel>
+      <Channel Fixture="34">2</Channel>
+      <Channel Fixture="35">0</Channel>
+      <Channel Fixture="35">1</Channel>
+      <Channel Fixture="35">2</Channel>
+      <Channel Fixture="36">0</Channel>
+      <Channel Fixture="36">1</Channel>
+      <Channel Fixture="36">2</Channel>
+      <Channel Fixture="37">0</Channel>
+      <Channel Fixture="37">1</Channel>
+      <Channel Fixture="37">2</Channel>
+      <Channel Fixture="38">0</Channel>
+      <Channel Fixture="38">1</Channel>
+      <Channel Fixture="38">2</Channel>
+      <Channel Fixture="39">0</Channel>
+      <Channel Fixture="39">1</Channel>
+      <Channel Fixture="39">2</Channel>
+      <Channel Fixture="40">0</Channel>
+      <Channel Fixture="40">1</Channel>
+      <Channel Fixture="40">2</Channel>
+      <Channel Fixture="41">0</Channel>
+      <Channel Fixture="41">1</Channel>
+      <Channel Fixture="41">2</Channel>
+      <Channel Fixture="42">0</Channel>
+      <Channel Fixture="42">1</Channel>
+      <Channel Fixture="42">2</Channel>
+      <Channel Fixture="43">0</Channel>
+      <Channel Fixture="43">1</Channel>
+      <Channel Fixture="43">2</Channel>
+      <Channel Fixture="44">0</Channel>
+      <Channel Fixture="44">1</Channel>
+      <Channel Fixture="44">2</Channel>
+      <Channel Fixture="45">0</Channel>
+      <Channel Fixture="45">1</Channel>
+      <Channel Fixture="45">2</Channel>
+      <Channel Fixture="46">0</Channel>
+      <Channel Fixture="46">1</Channel>
+      <Channel Fixture="46">2</Channel>
+      <Channel Fixture="47">0</Channel>
+      <Channel Fixture="47">1</Channel>
+      <Channel Fixture="47">2</Channel>
+      <Channel Fixture="48">0</Channel>
+      <Channel Fixture="48">1</Channel>
+      <Channel Fixture="48">2</Channel>
+      <Channel Fixture="49">0</Channel>
+      <Channel Fixture="49">1</Channel>
+      <Channel Fixture="49">2</Channel>
+      <Channel Fixture="50">0</Channel>
+      <Channel Fixture="50">1</Channel>
+      <Channel Fixture="50">2</Channel>
+      <Channel Fixture="51">0</Channel>
+      <Channel Fixture="51">1</Channel>
+      <Channel Fixture="51">2</Channel>
+      <Channel Fixture="52">0</Channel>
+      <Channel Fixture="52">1</Channel>
+      <Channel Fixture="52">2</Channel>
+      <Channel Fixture="53">0</Channel>
+      <Channel Fixture="53">1</Channel>
+      <Channel Fixture="53">2</Channel>
+      <Channel Fixture="54">0</Channel>
+      <Channel Fixture="54">1</Channel>
+      <Channel Fixture="54">2</Channel>
+      <Channel Fixture="55">0</Channel>
+      <Channel Fixture="55">1</Channel>
+      <Channel Fixture="55">2</Channel>
+      <Channel Fixture="56">0</Channel>
+      <Channel Fixture="56">1</Channel>
+      <Channel Fixture="56">2</Channel>
+      <Channel Fixture="57">0</Channel>
+      <Channel Fixture="57">1</Channel>
+      <Channel Fixture="57">2</Channel>
+      <Channel Fixture="58">0</Channel>
+      <Channel Fixture="58">1</Channel>
+      <Channel Fixture="58">2</Channel>
+      <Channel Fixture="59">0</Channel>
+      <Channel Fixture="59">1</Channel>
+      <Channel Fixture="59">2</Channel>
+      <Channel Fixture="60">0</Channel>
+      <Channel Fixture="60">1</Channel>
+      <Channel Fixture="60">2</Channel>
+      <Channel Fixture="61">0</Channel>
+      <Channel Fixture="61">1</Channel>
+      <Channel Fixture="61">2</Channel>
+      <Channel Fixture="62">0</Channel>
+      <Channel Fixture="62">1</Channel>
+      <Channel Fixture="62">2</Channel>
+      <Channel Fixture="63">0</Channel>
+      <Channel Fixture="63">1</Channel>
+      <Channel Fixture="63">2</Channel>
+      <Channel Fixture="64">0</Channel>
+      <Channel Fixture="64">1</Channel>
+      <Channel Fixture="64">2</Channel>
+      <Channel Fixture="65">0</Channel>
+      <Channel Fixture="65">1</Channel>
+      <Channel Fixture="65">2</Channel>
+      <Channel Fixture="66">0</Channel>
+      <Channel Fixture="66">1</Channel>
+      <Channel Fixture="66">2</Channel>
+      <Channel Fixture="67">0</Channel>
+      <Channel Fixture="67">1</Channel>
+      <Channel Fixture="67">2</Channel>
+      <Channel Fixture="68">0</Channel>
+      <Channel Fixture="68">1</Channel>
+      <Channel Fixture="68">2</Channel>
+      <Channel Fixture="69">0</Channel>
+      <Channel Fixture="69">1</Channel>
+      <Channel Fixture="69">2</Channel>
+      <Channel Fixture="70">0</Channel>
+      <Channel Fixture="70">1</Channel>
+      <Channel Fixture="70">2</Channel>
+      <Channel Fixture="71">0</Channel>
+      <Channel Fixture="71">1</Channel>
+      <Channel Fixture="71">2</Channel>
+      <Channel Fixture="72">0</Channel>
+      <Channel Fixture="72">1</Channel>
+      <Channel Fixture="72">2</Channel>
+      <Channel Fixture="73">0</Channel>
+      <Channel Fixture="73">1</Channel>
+      <Channel Fixture="73">2</Channel>
+      <Channel Fixture="74">0</Channel>
+      <Channel Fixture="74">1</Channel>
+      <Channel Fixture="74">2</Channel>
+      <Channel Fixture="75">0</Channel>
+      <Channel Fixture="75">1</Channel>
+      <Channel Fixture="75">2</Channel>
+      <Channel Fixture="76">0</Channel>
+      <Channel Fixture="76">1</Channel>
+      <Channel Fixture="76">2</Channel>
+      <Channel Fixture="77">0</Channel>
+      <Channel Fixture="77">1</Channel>
+      <Channel Fixture="77">2</Channel>
+      <Channel Fixture="78">0</Channel>
+      <Channel Fixture="78">1</Channel>
+      <Channel Fixture="78">2</Channel>
+      <Channel Fixture="79">0</Channel>
+      <Channel Fixture="79">1</Channel>
+      <Channel Fixture="79">2</Channel>
+      <Channel Fixture="80">0</Channel>
+      <Channel Fixture="80">1</Channel>
+      <Channel Fixture="80">2</Channel>
+      <Channel Fixture="81">0</Channel>
+      <Channel Fixture="81">1</Channel>
+      <Channel Fixture="81">2</Channel>
+      <Channel Fixture="82">0</Channel>
+      <Channel Fixture="82">1</Channel>
+      <Channel Fixture="82">2</Channel>
+      <Channel Fixture="83">0</Channel>
+      <Channel Fixture="83">1</Channel>
+      <Channel Fixture="83">2</Channel>
+      <Channel Fixture="84">0</Channel>
+      <Channel Fixture="84">1</Channel>
+      <Channel Fixture="84">2</Channel>
+      <Channel Fixture="85">0</Channel>
+      <Channel Fixture="85">1</Channel>
+      <Channel Fixture="85">2</Channel>
+      <Channel Fixture="86">0</Channel>
+      <Channel Fixture="86">1</Channel>
+      <Channel Fixture="86">2</Channel>
+      <Channel Fixture="87">0</Channel>
+      <Channel Fixture="87">1</Channel>
+      <Channel Fixture="87">2</Channel>
+      <Channel Fixture="88">0</Channel>
+      <Channel Fixture="88">1</Channel>
+      <Channel Fixture="88">2</Channel>
+      <Channel Fixture="89">0</Channel>
+      <Channel Fixture="89">1</Channel>
+      <Channel Fixture="89">2</Channel>
+      <Channel Fixture="90">0</Channel>
+      <Channel Fixture="90">1</Channel>
+      <Channel Fixture="90">2</Channel>
+     </Level>
+     <Playback>
+      <Function>4294967295</Function>
+     </Playback>
+    </Slider>
+    <Slider Caption="Datastream" ID="2" WidgetStyle="Slider" InvertedAppearance="false">
+     <WindowState Visible="True" X="350" Y="50" Width="85" Height="220"/>
+     <Appearance>
+      <FrameStyle>Sunken</FrameStyle>
+      <ForegroundColor>Default</ForegroundColor>
+      <BackgroundColor>Default</BackgroundColor>
+      <BackgroundImage>None</BackgroundImage>
+      <Font>Default</Font>
+     </Appearance>
+     <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None">Playback</SliderMode>
+     <Level LowLimit="0" HighLimit="255" Value="0"/>
+     <Playback>
+      <Function>10</Function>
+     </Playback>
+    </Slider>
    </Frame>
    <Frame Caption="Single color lights" ID="5">
     <Appearance>
@@ -1444,7 +1954,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="10" Y="0" Width="375" Height="475"/>
+    <WindowState Visible="True" X="15" Y="15" Width="540" Height="510"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -1480,49 +1990,6 @@
      </Playback>
     </Slider>
    </Frame>
-   <Button Caption="Button 0" ID="0" Icon="">
-    <WindowState Visible="True" X="1015" Y="145" Width="50" Height="50"/>
-    <Appearance>
-     <FrameStyle>None</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <Function ID="4294967295"/>
-    <Action>Toggle</Action>
-    <Intensity Adjust="False">100</Intensity>
-   </Button>
-   <Slider Caption="Rainbow" ID="6" WidgetStyle="Slider" InvertedAppearance="false">
-    <WindowState Visible="True" X="580" Y="50" Width="60" Height="200"/>
-    <Appearance>
-     <FrameStyle>Sunken</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None">Playback</SliderMode>
-    <Level LowLimit="0" HighLimit="255" Value="0"/>
-    <Playback>
-     <Function>6</Function>
-    </Playback>
-   </Slider>
-   <Slider Caption="Rainbow pulses" ID="9" WidgetStyle="Slider" InvertedAppearance="false">
-    <WindowState Visible="True" X="650" Y="50" Width="60" Height="200"/>
-    <Appearance>
-     <FrameStyle>Sunken</FrameStyle>
-     <ForegroundColor>Default</ForegroundColor>
-     <BackgroundColor>Default</BackgroundColor>
-     <BackgroundImage>None</BackgroundImage>
-     <Font>Default</Font>
-    </Appearance>
-    <SliderMode ValueDisplayStyle="Exact" ClickAndGoType="None">Playback</SliderMode>
-    <Level LowLimit="0" HighLimit="255" Value="0"/>
-    <Playback>
-     <Function>3</Function>
-    </Playback>
-   </Slider>
   </Frame>
   <Properties>
    <Size Width="1920" Height="1080"/>
