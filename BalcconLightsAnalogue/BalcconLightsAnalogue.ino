@@ -22,9 +22,16 @@ const char* password = "";
 ////////////////
 // LED settings
 ////////////////
-#define REDPIN   25  //pins connected to analog LED R,G,B
-#define GREENPIN 26
-#define BLUEPIN  27
+//For a norma ESP32
+//#define REDPIN   25  //pins connected to analog LED R,G,B
+//#define GREENPIN 26
+//#define BLUEPIN  27
+
+//SHA badje : on the addon 3/4/5 top row
+
+#define REDPIN   33  //pins connected to analog LED R,G,B
+#define GREENPIN 16
+#define BLUEPIN  17
 
 // use first channel of 16 channels (started from zero)
 #define LEDC_CHANNEL_RED     0
