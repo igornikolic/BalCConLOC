@@ -13,10 +13,20 @@
 #include <ArtnetWifi.h>
 #include <FastLED.h>
 
+// Universes :
+// Programmable stripc : 1
+// Single color strios : 2
+// Human shape piece : 3
+// Logo : 4
+const int myUniverse = 4; 
+const int lampNumber = 3;          // the position of the lamp in the light program.
+
+
+
 /////////////////
 // Wifi settings
 /////////////////
-const char* ssid = "artnet"; //make dedicated artnet ssid
+const char* ssid = "artnet"; // dedicated artnet ssid
 const char* password = "";
 
 ////////////////
@@ -45,25 +55,27 @@ const char* password = "";
 #define LEDC_BASE_FREQ     5000
 
 
-const int numLeds = 1; //A simple strip only has one color
+const int numLeds = 1;      //How many different LEDS in the strip
+
 const int numberOfChannels = numLeds * 3; // Total number of channels you want to receive (1 led = 3 channels)
 CRGB leds[numLeds];
 uint8_t BRIGHTNESS = 255;  //For adjusting master brightness
 uint8_t hue;
-
+bool debugRGB = false;
 
 //////////////////////
 // Art-Net settings
 /////////////////////
 ArtnetWifi artnet;
-const int startUniverse = 2; // All single color lamps are in universe 2
 
 // Check if we got all universes
 const int maxUniverses = numberOfChannels / 512 + ((numberOfChannels % 512) ? 1 : 0);
 bool universesReceived[maxUniverses];
-bool sendFrame = 1;
+bool sendFrame = 0;
 int previousDataLength = 0;
 
+bool debug = false;
+bool debugMyUniverseOnly = true;
 
 // connect to wifi – returns true if successful or false if not
 boolean ConnectWifi(void)
@@ -125,47 +137,58 @@ void initTest()
 
 void onDmxFrame(uint16_t universe, uint16_t length, uint8_t sequence, uint8_t* data)
 {
-      //Serial.println("Got a frame!");
 
-  sendFrame = 1;
-  // set brightness of the whole strip
-  if (universe == 15)
+  //////////debug /////////
+
+  if(debug){
+      if (debugMyUniverseOnly & myUniverse != universe){
+      return;
+      }
+
+   Serial.println("Got a frame, printing debug");
+
+  boolean tail = false;
+  
+  Serial.print("DMX: Univ: ");
+  Serial.print(universe, DEC);
+  Serial.print(", Seq: ");
+  Serial.print(sequence, DEC);
+  Serial.print(", Data (");
+  Serial.print(length, DEC);
+  Serial.print("): ");
+  
+  if (length > 32) {
+    length = 32;
+    tail = true;
+  }
+  // send out the buffer
+  for (int i = 0; i < length; i++)
   {
-    BRIGHTNESS = data[0];
-    showAnalogRGB( leds[0]);  //update the LED display
+    Serial.print(data[i], DEC);
+    Serial.print(" ");
   }
+  if (tail) {
+    Serial.print("...");
+  }
+  Serial.println();
 
-  // Store which universe has got in
-  if ((universe - startUniverse) < maxUniverses) {
-    universesReceived[universe - startUniverse] = 1;
   }
+  ////////// end debug///////////
 
-  for (int i = 0 ; i < maxUniverses ; i++)
-  {
-    if (universesReceived[i] == 0)
-    {
-      //Serial.println("Broke");
-      sendFrame = 0;
-      break;
-    }
-  }
 
   // read universe and put into the right part of the display buffer
-  for (int i = 0; i < length / 3; i++)
-  {
-    int led = i + (universe - startUniverse) * (previousDataLength / 3);
-    if (led < numLeds)
-      leds[led] = CRGB(data[i * 3], data[i * 3 + 1], data[i * 3 + 2]);
-  }
-  previousDataLength = length;
+  // changed 0 to lampNumber, as this offsets to the right  rgb triplet
+  if (myUniverse == universe){
+    Serial.print("We got a frame for universe: ");
+    Serial.println(universe, DEC);
+      int offset = (3*lampNumber) - 3;
+      leds[0] = CRGB(data[offset], data[offset + 1], data[offset + 2]);
+       showAnalogRGB( leds[0]);  //update the LED display
 
-  if (sendFrame)
-  {
-    showAnalogRGB( leds[0]);  //update the LED display
-    // Reset universeReceived to 0
-    memset(universesReceived, 0, maxUniverses);
   }
-}
+ 
+  }
+
 
 void setup()
 {
@@ -206,19 +229,27 @@ void ledcAnalogWrite(uint8_t channel, uint32_t value, uint32_t valueMax = 255) {
 void showAnalogRGB( const CRGB& rgb) {
   //Note: scale8 is used to adjust values based on BRIGHTNESS
 
-  //Also note, I needed to update this to use 255 minus the rgb
-  //value since the LED I am using is common anode.  If your
-  //analog RGB LED is common cathode you don't need the "255-" part.
-  //analogWrite(REDPIN,   255-scale8(rgb.r, BRIGHTNESS) );  //for common anode
-  //analogWrite(GREENPIN, 255-scale8(rgb.g, BRIGHTNESS) );
-  //analogWrite(BLUEPIN,  255-scale8(rgb.b, BRIGHTNESS) );
-  //analogWrite(REDPIN,   scale8(rgb.r, BRIGHTNESS) );  //for common cathode
-  //analogWrite(GREENPIN, scale8(rgb.g, BRIGHTNESS) );
-  //analogWrite(BLUEPIN,  scale8(rgb.b, BRIGHTNESS) );
+  int RVAL = scale8(rgb.r, BRIGHTNESS);
+  ledcAnalogWrite(LEDC_CHANNEL_RED, RVAL);
+  if (debugRGB){
+  Serial.print("Red set to : ");
+  Serial.println(RVAL, DEC);
+  }
   
-  ledcAnalogWrite(LEDC_CHANNEL_RED, scale8(rgb.r, BRIGHTNESS));
-  ledcAnalogWrite(LEDC_CHANNEL_GREEN, scale8(rgb.g, BRIGHTNESS));
-  ledcAnalogWrite(LEDC_CHANNEL_BLUE, scale8(rgb.b, BRIGHTNESS));
+  int GVAL = scale8(rgb.g, BRIGHTNESS);
+  ledcAnalogWrite(LEDC_CHANNEL_GREEN, GVAL);
+  if(debugRGB){
+  Serial.print("Green set to : ");
+  Serial.println(GVAL, DEC);
+  }
+  
+  int BVAL = scale8(rgb.b, BRIGHTNESS);
+  ledcAnalogWrite(LEDC_CHANNEL_BLUE, BVAL);
+  if(debugRGB){
+   Serial.print("Green set to : ");
+  Serial.println(BVAL, DEC);
+  Serial.println("-------------");
+  }
 }
 
 void loop()
