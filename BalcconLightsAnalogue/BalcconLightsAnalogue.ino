@@ -19,7 +19,7 @@
 // Human shape piece : 3
 // Logo : 4
 const int myUniverse = 4; 
-const int lampNumber = 3;          // the position of the lamp in the light program.
+const int lampNumber = 3  ;          // the position of the lamp in the light program.
 
 
 
