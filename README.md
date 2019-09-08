@@ -3,28 +3,34 @@ BalCCon Lights Operation Center
 
 
 ## Esthetics and vision
-Welcome to BalCCon, a SocioCyberPhysical entity, self-organizing itself over the course of several days. We are happy you decided to join its evolution into Uncharted Waters over the next several days. In the middle of the facility you will find the *Organic binary human-machine inteRaction GenerAtor*  (ORGA) core, the coordinating hub of the entity. From there, many connector radiate carrying data, knowledge and wisdom in all of it multicolored and dynamic beauty. Ducts are going in and out of walls, connecting the core parts of the entity together with the underlying complex technical, social and environmental infrastructure of outside world, hidden and uncharted behind the surface. The ORGA  draws its main computing power from the  *BAsic Large Community Computing Organizational uNit* (BALCCON) situated in the *Hacker Area* motherboard. Primary visual output is the distributed and up-cycled *Man-machine Terminal Write-only Landscape* (MATEWall). To the right is the main physical input-output  connector and to the left of the BMMC and MATEWall is the *The neurAl network Logic Training aSembly* (TALKS). In the likely case that the TALKS cause a neural stack overload, you will find *the  neural reBalancing ARray* (BAR) right next door.  Please dump excess core only in the designated areas. We wish you a pleasant participation in the collective computing process! 
+Welcome to BalCCon, a SocioCyberPhysical self-organizing entity. We are happy you decided to join its evolution into Uncharted Waters over the next several days. 
+
+In the middle of the facility you will find the *Organic binary human-machine inteRaction GenerAtor*  (ORGA) core, the coordinating hub of the entity. From there, many connector radiate carrying data, knowledge and wisdom in all of it multicolored and dynamic beauty. Ducts are going in and out of walls, connecting the core parts of the entity together with the underlying complex technical, social and environmental infrastructure of outside world, hidden and uncharted behind the surface. 
+
+The ORGA  draws its main computing power from the  *BAsic Large Community Computing Organizational uNit* (BALCCON) situated in the *Hacker Area* motherboard. Primary visual output is the distributed and up-cycled *Man-machine Terminal Write-only Landscape* (MATEWall). To the right is the main physical input-output  connector and to the left of the BMMC and MATEWall is the *The neurAl network Logic Training aSembly* (TALKS). 
+
+In the likely case that the TALKS cause a neural stack overload, you will find *the  neural reBalancing ARray* (BAR) right next door.  Please dump excess core only in the designated areas. We wish you a pleasant participation in the collective computing process! 
 
 
-## Lights pan and DMX setup
+## Lights plan and DMX setup
 
 - Universe 1 : Programmable RGB LED strips of 90 LEDS, DMX addresses 1-270 
-- Universe 2 : Nonprogrammable RGB strips, various lengths, mainly  between 3-5m, DMX address 1-3
+- Universe 2 : Non-programmable RGB strips, various lengths, mainly  between 3-5m, DMX address 1-3
 - Universe 3 : ORGA core human figure lights, DMX addresses 1/2 human figures, 3 connector between them
 - Universe 4 : Logo lights, DMX addresses : 1-5 opposing pairs of legs, 6 chip body
 
-QLC+ 4.12 has a hardcoded limit of 4 universes. The entrance lights have total of 450 LEDs, in 2 x 5 m strips, on 30 LED/m other 60. DMX can address 170 RGB leds in a single universe, so we need 3 universes of 150 LEDS.
+QLC+ 4.12 has a hard coded limit of 4 universes. The entrance lights have total of 450 LEDs, in 2 x 5 m strips, on 30 LED/m other 60. DMX can address 170 RGB leds in a single universe, so we need 3 universes of 150 LEDS.
 - Universe 5/6/7 : Entrance. Currently not controlled by QLC+, but will be a standalone program in the controller as default. Can be converted to ledcat driven setup.
 
 ## Technical setup
-Light are controlled using DMX512 protocol, over ArtNet / WiFi, on ESP32 micro-controllers and LEDS strips. Smart LED strips (APA10) are controlled using FASTLed library directly using SPI. Nonprogrammable (analogue) LEDs are controled using a GPIO PWM FASTLed warapper and MOSFETs.
+Light are controlled using DMX512 protocol, over ArtNet / WiFi, on ESP32 micro-controllers and LEDS strips. Smart LED strips (APA10) are controlled using FASTLed library directly using SPI. Non-programmable (analogue) LEDs are controlled using a GPIO PWM FASTLed wrapper and MOSFETs.
 
 ## Hardware
 Owned by Igor
 - Lenovo X121e laptop as main controller
 - GL-MT300A router for testing
-- 12 x 90 adressable RGB LED ledstrip + SHA2017 badge controller,  3m, DMX universe 1
-- 2 x nonadressable RGB strip + SHA2017 badge controller, ~3m, DMX universe 2
+- 12 x 90 addressable RGB LED ledstrip + SHA2017 badge controller,  3m, DMX universe 1
+- 2 x non-adressable RGB strip + SHA2017 badge controller, ~3m, DMX universe 2
 - 30cm Disco ball + motor
 - 3W 3 degree white PinSpot
 - Red & Green laser pattern projector
