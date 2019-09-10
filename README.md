@@ -1,8 +1,7 @@
 # BalCConLOC
-BalCCon Lights Operation Center
+_BalCCon Lights Operation Center_
 
 
-## Esthetics and vision
 Welcome to BalCCon, a SocioCyberPhysical self-organizing entity. We are happy you decided to join its evolution into Uncharted Waters over the next several days. 
 
 In the middle of the facility you will find the *Organic binary human-machine inteRaction GenerAtor*  (ORGA) core, the coordinating hub of the entity. From there, many connector radiate carrying data, knowledge and wisdom in all of it multicolored and dynamic beauty. Ducts are going in and out of walls, connecting the core parts of the entity together with the underlying complex technical, social and environmental infrastructure of outside world, hidden and uncharted behind the surface. 
