@@ -6,7 +6,7 @@ Welcome to BalCCon, a SocioCyberPhysical self-organizing entity. We are happy yo
 
 In the middle of the facility you will find the *Organic binary human-machine inteRaction GenerAtor*  (ORGA) core, the coordinating hub of the entity. From there, many connector radiate carrying data, knowledge and wisdom in all of it multicolored and dynamic beauty. Ducts are going in and out of walls, connecting the core parts of the entity together with the underlying complex technical, social and environmental infrastructure of outside world, hidden and uncharted behind the surface. 
 
-The ORGA  draws its main computing power from the  *BAsic Large Community Computing Organizational uNit* (BALCCON) situated in the *Hacker Area* motherboard. Primary visual output is the distributed and up-cycled *Man-machine Terminal Write-only Landscape* (MATEWall). To the right is the main physical input-output  connector and to the left of the BMMC and MATEWall is the *The neurAl network Logic Training aSembly* (TALKS). 
+The ORGA  draws its main computing power from the  *BAsic Large Community Computing Organizational uNit* (BALCCON) situated in the *Hacker Area* motherboard. Primary visual output is the distributed and up-cycled *Man-machine Terminal Write-only Landscape* (MATEWall). To the right is the main physical input-output  connector and to the left of the ORGA and MATEWall is the *The neurAl network Logic Training aSembly* (TALKS). 
 
 In the likely case that the TALKS cause a neural stack overload, you will find *the  neural reBalancing ARray* (BAR) right next door.  Please dump excess core only in the designated areas. We wish you a pleasant participation in the collective computing process! 
 
