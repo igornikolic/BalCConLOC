@@ -34,10 +34,10 @@ const char* password = "";
 
 
 // LED settings
-const int numLeds = 90; // CHANGE FOR YOUR SETUP
+const int numLeds = 550; // CHANGE FOR YOUR SETUP
 const int numberOfChannels = numLeds * 3; // Total number of channels you want to receive (1 led = 3 channels)
 CRGB leds[numLeds];
-#define LED_TYPE    WS2812
+#define LED_TYPE    APA102
 #define COLOR_ORDER BGR
 
 
@@ -126,41 +126,46 @@ void onDmxFrame(uint16_t universe, uint16_t length, uint8_t sequence, uint8_t* d
 
   sendFrame = 1;
   // set brightness of the whole strip
-  if (universe == 15)
-  {
-    FastLED.setBrightness(data[0]);
-    FastLED.show();
-  }
+  //if (universe == 15)
+  //{
+  //  FastLED.setBrightness(data[0]);
+  //  FastLED.show();
+ // }
 
   // Store which universe has got in
-  if ((universe - startUniverse) < maxUniverses) {
-    universesReceived[universe - startUniverse] = 1;
-  }
+  //if ((universe - startUniverse) < maxUniverses) {
+  //  universesReceived[universe - startUniverse] = 1;
+ // }
 
-  for (int i = 0 ; i < maxUniverses ; i++)
-  {
-    if (universesReceived[i] == 0)
-    {
+  //for (int i = 0 ; i < maxUniverses ; i++)
+  //{
+  //  if (universesReceived[i] == 0)
+  //  {
       //Serial.println("Broke");
-      sendFrame = 0;
-      break;
+  //    sendFrame = 0;
+  //    break;
+  //  }
+  //}
+  if(universe == 1 ) {
+    // read universe and put into the right part of the display buffer
+    int mylen = 90 ;
+    for (int r = 0 ; r < ( numLeds / 90 )  + 1 ; r++ ) {
+      for (int i = 0; i < 90; i++)
+      {
+        int led = i ;//+ (universe - startUniverse) ;//* (previousDataLength / 3);
+        if (led+r*90 < numLeds)
+          leds[led+r*90] = CRGB(data[i * 3], data[i * 3 + 1], data[i * 3 + 2]);
+  
+      }
     }
-  }
-
-  // read universe and put into the right part of the display buffer
-  for (int i = 0; i < length / 3; i++)
-  {
-    int led = i + (universe - startUniverse) * (previousDataLength / 3);
-    if (led < numLeds)
-      leds[led] = CRGB(data[i * 3], data[i * 3 + 1], data[i * 3 + 2]);
-  }
-  previousDataLength = length;
-
-  if (sendFrame)
-  {
-    FastLED.show();
-    // Reset universeReceived to 0
-    memset(universesReceived, 0, maxUniverses);
+    previousDataLength = length;
+  
+    if (sendFrame)
+    {
+      FastLED.show();
+      // Reset universeReceived to 0
+      memset(universesReceived, 0, maxUniverses);
+    }
   }
 }
 
@@ -169,9 +174,10 @@ void setup()
   Serial.begin(115200);
   ConnectWifi();
   artnet.begin();
-  //FastLED.addLeds<LED_TYPE,DATA_PIN,CLK_PIN,COLOR_ORDER>(leds, numLeds).setCorrection(TypicalLEDStrip);
-  FastLED.addLeds<WS2812, DATA_PIN, GRB>(leds, numLeds); // original code
+  FastLED.addLeds<LED_TYPE,DATA_PIN,CLK_PIN,COLOR_ORDER>(leds, numLeds).setCorrection(TypicalLEDStrip);
+  //FastLED.addLeds<WS2812, DATA_PIN, GRB>(leds, numLeds); // original code
   initTest();
+    FastLED.setBrightness(100);
 
   // this will be called for each packet received
   artnet.setArtDmxCallback(onDmxFrame);
