@@ -14,7 +14,7 @@ In the likely case that the TALKS cause a neural stack overload, you will find *
 During BalCCon2k19 you have the following options :
 1 Come to the LOC desk, use the controller GIU
 1 Use the WEB GUI : http://192.168.1.105:9999/
-1 Use ledcat tool. Come ask for the login credentials, ssh into the controller, upload your program that generates RGB values to standard output, choose the protocol and geometry (see below) and run: $yourProgram | ./ledcat --geometry 90 artnet -b --universe 1
+1 Use ledcat tool. Come ask for the login credentials, ssh into the controller, upload your program that generates a *binary string* of RGB values or the correct length to standard output, set the protocol and geometry (see below) and run: $yourProgram | ./ledcat --geometry 90 artnet -b --universe 1
 
 
 ## Lights plan and DMX setup
