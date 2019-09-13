@@ -19,7 +19,7 @@
 // Human shape piece : 3
 // Logo : 4
 const int myUniverse = 4; 
-const int lampNumber = 3  ;          // the position of the lamp in the light program.
+const int lampNumber = 6  ;          // the position of the lamp in the light program.
 
 
 
@@ -33,15 +33,15 @@ const char* password = "";
 // LED settings
 ////////////////
 //For a norma ESP32
-//#define REDPIN   25  //pins connected to analog LED R,G,B
-//#define GREENPIN 26
-//#define BLUEPIN  27
+#define REDPIN   25  //pins connected to analog LED R,G,B
+#define GREENPIN 26
+#define BLUEPIN  27
 
 //SHA badje : on the addon 3/4/5 top row
 
-#define REDPIN   33  //pins connected to analog LED R,G,B
-#define GREENPIN 16
-#define BLUEPIN  17
+//#define REDPIN   33  //pins connected to analog LED R,G,B
+//#define GREENPIN 16
+//#define BLUEPIN  17
 
 // use first channel of 16 channels (started from zero)
 #define LEDC_CHANNEL_RED     0
@@ -75,7 +75,7 @@ bool sendFrame = 0;
 int previousDataLength = 0;
 
 bool debug = false;
-bool debugMyUniverseOnly = true;
+bool debugMyUniverseOnly = false;
 
 // connect to wifi – returns true if successful or false if not
 boolean ConnectWifi(void)
