@@ -34,10 +34,10 @@ const char* password = "";
 
 
 // LED settings
-const int numLeds = 150; // CHANGE FOR YOUR SETUP
+const int numLeds = 200; // CHANGE FOR YOUR SETUP
 const int numberOfChannels = numLeds * 3; // Total number of channels you want to receive (1 led = 3 channels)
 CRGB leds[numLeds];
-#define LED_TYPE    WS2812
+#define LED_TYPE    WS2811
 #define COLOR_ORDER BGR
 
 
