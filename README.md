@@ -10,6 +10,12 @@ The ORGA  draws its main computing power from the  *BAsic Large Community Comput
 
 In the likely case that the TALKS cause a neural stack overload, you will find *the  neural reBalancing ARray* (BAR) right next door.  Please dump excess core only in the designated areas. We wish you a pleasant participation in the collective computing process! 
 
+## How to play with the light
+During BalCCon2k19 you have the following options :
+1 Come to the LOC desk, use the controller GIU
+1 Use the WEB GUI : http://192.168.1.105:9999/
+1 Use ledcat tool. Come ask for the login credentials, ssh into the controller, upload your program that generates RGB values to standard output, choose the protocol and geometry (see below) and run: $yourProgram | ./ledcat --geometry 90 artnet -b --universe 1
+
 
 ## Lights plan and DMX setup
 
@@ -17,9 +23,6 @@ In the likely case that the TALKS cause a neural stack overload, you will find *
 - Universe 2 : Non-programmable RGB strips, various lengths, mainly  between 3-5m, DMX address 1-3
 - Universe 3 : ORGA core human figure lights, DMX addresses 1/2 human figures, 3 connector between them
 - Universe 4 : Logo lights, DMX addresses : 1-5 opposing pairs of legs, 6 chip body
-
-QLC+ 4.12 has a hard coded limit of 4 universes. The entrance lights have total of 450 LEDs, in 2 x 5 m strips, on 30 LED/m other 60. DMX can address 170 RGB leds in a single universe, so we need 3 universes of 150 LEDS.
-- Universe 5/6/7 : Entrance. Currently not controlled by QLC+, but will be a standalone program in the controller as default. Can be converted to ledcat driven setup.
 
 ## Technical setup
 Light are controlled using DMX512 protocol, over ArtNet / WiFi, on ESP32 micro-controllers and LEDS strips. Smart LED strips (APA10) are controlled using FASTLed library directly using SPI. Non-programmable (analogue) LEDs are controlled using a GPIO PWM FASTLed wrapper and MOSFETs.
