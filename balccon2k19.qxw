@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Workspace>
-<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="VirtualConsole">
+<Workspace xmlns="http://www.qlcplus.org/Workspace" CurrentWindow="FunctionManager">
  <Creator>
   <Name>Q Light Controller Plus</Name>
   <Version>4.12.1</Version>
@@ -1168,8 +1168,8 @@
    <MonoColor>4294901760</MonoColor>
    <EndColor>4278190080</EndColor>
    <FixtureGroup>2</FixtureGroup>
-   <Property Name="taillength" Value="20"/>
    <Property Name="tailfade" Value="Yes"/>
+   <Property Name="taillength" Value="20"/>
   </Function>
   <Function ID="2" Type="RGBMatrix" Name="ColdPulsFromMiddle">
    <Speed FadeIn="0" FadeOut="0" Duration="30"/>
@@ -1328,13 +1328,13 @@
    <DimmerControl>1</DimmerControl>
    <MonoColor>4285780502</MonoColor>
    <FixtureGroup>2</FixtureGroup>
-   <Property Name="color4Index" Value="Blue"/>
    <Property Name="color2Index" Value="Red"/>
    <Property Name="presetSize" Value="5"/>
    <Property Name="color5Index" Value="Orange"/>
-   <Property Name="presetNumber" Value="5"/>
-   <Property Name="presetCollision" Value="Yes"/>
    <Property Name="color3Index" Value="Green"/>
+   <Property Name="presetCollision" Value="Yes"/>
+   <Property Name="color4Index" Value="Blue"/>
+   <Property Name="presetNumber" Value="5"/>
   </Function>
   <Function ID="10" Type="RGBMatrix" Name="Datastream" BlendMode="Additive">
    <Speed FadeIn="0" FadeOut="0" Duration="500"/>
@@ -1400,7 +1400,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="1145" Y="0" Width="625" Height="650"/>
+    <WindowState Visible="False" X="1145" Y="0" Width="625" Height="650"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -1408,7 +1408,7 @@
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
     <Slider Caption="Kit" ID="1" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="10" Y="50" Width="60" Height="220"/>
+     <WindowState Visible="False" X="10" Y="50" Width="60" Height="220"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1423,7 +1423,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Rainbow cycle" ID="4" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="70" Y="50" Width="70" Height="220"/>
+     <WindowState Visible="False" X="70" Y="50" Width="70" Height="220"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1438,7 +1438,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Rainbow pulses" ID="6" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="145" Y="50" Width="70" Height="220"/>
+     <WindowState Visible="False" X="145" Y="50" Width="70" Height="220"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1453,7 +1453,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Blue pulse" ID="9" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="225" Y="50" Width="55" Height="220"/>
+     <WindowState Visible="False" X="225" Y="50" Width="55" Height="220"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1468,7 +1468,7 @@
      </Playback>
     </Slider>
     <Slider Caption="White" ID="10" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="535" Y="50" Width="55" Height="415"/>
+     <WindowState Visible="False" X="535" Y="50" Width="55" Height="415"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1757,7 +1757,7 @@
      </Playback>
     </Slider>
     <Button Caption="Strobe" ID="11" Icon="">
-     <WindowState Visible="True" X="450" Y="470" Width="50" Height="50"/>
+     <WindowState Visible="False" X="450" Y="470" Width="50" Height="50"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1770,7 +1770,7 @@
      <Intensity Adjust="False">100</Intensity>
     </Button>
     <Slider Caption="Bounce" ID="12" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="285" Y="50" Width="60" Height="220"/>
+     <WindowState Visible="False" X="285" Y="50" Width="60" Height="220"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -1785,7 +1785,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Single color" ID="0" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="445" Y="50" Width="90" Height="415"/>
+     <WindowState Visible="False" X="445" Y="50" Width="90" Height="415"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2071,7 +2071,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Datastream" ID="2" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="350" Y="50" Width="85" Height="220"/>
+     <WindowState Visible="False" X="350" Y="50" Width="85" Height="220"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2094,7 +2094,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="15" Y="15" Width="255" Height="505"/>
+    <WindowState Visible="False" X="15" Y="15" Width="255" Height="505"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -2102,7 +2102,7 @@
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
     <Slider Caption="Single color rainbow" ID="8" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="25" Y="105" Width="80" Height="350"/>
+     <WindowState Visible="False" X="25" Y="105" Width="80" Height="350"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2117,7 +2117,7 @@
      </Playback>
     </Slider>
     <Slider Caption="static color" ID="17" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="130" Y="110" Width="70" Height="345"/>
+     <WindowState Visible="False" X="130" Y="110" Width="70" Height="345"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2144,7 +2144,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="45" Y="545" Width="205" Height="500"/>
+    <WindowState Visible="False" X="45" Y="545" Width="205" Height="500"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -2160,7 +2160,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="275" Y="20" Width="260" Height="495"/>
+    <WindowState Visible="False" X="275" Y="20" Width="260" Height="495"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -2168,7 +2168,7 @@
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
     <Slider Caption="rainbow" ID="15" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="15" Y="55" Width="85" Height="335"/>
+     <WindowState Visible="False" X="15" Y="55" Width="85" Height="335"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2183,7 +2183,7 @@
      </Playback>
     </Slider>
     <Button Caption="HeartBeat" ID="27" Icon="">
-     <WindowState Visible="True" X="15" Y="410" Width="125" Height="40"/>
+     <WindowState Visible="False" X="15" Y="410" Width="125" Height="40"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2196,7 +2196,7 @@
      <Intensity Adjust="False">100</Intensity>
     </Button>
     <Slider Caption="Slider 7" ID="7" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="120" Y="60" Width="65" Height="325"/>
+     <WindowState Visible="False" X="120" Y="60" Width="65" Height="325"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2229,7 +2229,7 @@
      <BackgroundImage>None</BackgroundImage>
      <Font>Default</Font>
     </Appearance>
-    <WindowState Visible="True" X="540" Y="15" Width="530" Height="520"/>
+    <WindowState Visible="False" X="540" Y="15" Width="530" Height="520"/>
     <AllowChildren>True</AllowChildren>
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
@@ -2237,7 +2237,7 @@
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
     <Button Caption="Rainbow" ID="19" Icon="">
-     <WindowState Visible="True" X="20" Y="75" Width="95" Height="35"/>
+     <WindowState Visible="False" X="20" Y="75" Width="95" Height="35"/>
      <Appearance>
       <FrameStyle>None</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2250,7 +2250,7 @@
      <Intensity Adjust="False">100</Intensity>
     </Button>
     <Slider Caption="Single Color Logo" ID="20" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="20" Y="130" Width="90" Height="260"/>
+     <WindowState Visible="False" X="20" Y="130" Width="90" Height="260"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2284,7 +2284,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Leg 1" ID="21" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="120" Y="45" Width="55" Height="250"/>
+     <WindowState Visible="False" X="120" Y="45" Width="55" Height="250"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2303,7 +2303,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Leg 2" ID="22" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="180" Y="45" Width="60" Height="250"/>
+     <WindowState Visible="False" X="180" Y="45" Width="60" Height="250"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2322,7 +2322,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Leg 3" ID="23" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="245" Y="45" Width="60" Height="250"/>
+     <WindowState Visible="False" X="245" Y="45" Width="60" Height="250"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2341,7 +2341,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Leg 4" ID="24" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="305" Y="45" Width="60" Height="250"/>
+     <WindowState Visible="False" X="305" Y="45" Width="60" Height="250"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2360,7 +2360,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Leg 5" ID="25" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="370" Y="45" Width="50" Height="250"/>
+     <WindowState Visible="False" X="370" Y="45" Width="50" Height="250"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
@@ -2379,7 +2379,7 @@
      </Playback>
     </Slider>
     <Slider Caption="Body" ID="26" WidgetStyle="Slider" InvertedAppearance="false">
-     <WindowState Visible="True" X="425" Y="50" Width="60" Height="245"/>
+     <WindowState Visible="False" X="425" Y="50" Width="60" Height="245"/>
      <Appearance>
       <FrameStyle>Sunken</FrameStyle>
       <ForegroundColor>Default</ForegroundColor>
