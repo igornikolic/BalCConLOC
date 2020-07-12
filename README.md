@@ -23,7 +23,6 @@ All new and shiny BalCCon after LOC did their thing!
 ![After](images/after_2.JPG)
 ![After](images/after_3.JPG)
 ![After](images/after_4.JPG)
-![After](images/after_5.JPG)
 ![After](images/after_6.JPG) 
 ![After](images/after_7.JPG)
 ![After](images/after_8.JPG )
