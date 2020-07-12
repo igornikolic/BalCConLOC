@@ -15,7 +15,6 @@ The old and boring confenrence center.
 ![Before](images/before_1.JPG)
 ![Before](images/before_2.JPG)
 ![Before](images/before_3.JPG)
-![Before](images/before_4.JPG)
 ![Before](images/before_5.JPG)
 
 # After
