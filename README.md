@@ -10,6 +10,31 @@ The ORGA  draws its main computing power from the  *BAsic Large Community Comput
 
 In the likely case that the TALKS cause a neural stack overload, you will find *the  neural reBalancing ARray* (BAR) right next door.  Please dump excess core only in the designated areas. We wish you a pleasant participation in the collective computing process! 
 
+# Before
+The old and boring confenrence center.
+![Before](images/before_1.JPG)
+![Before](images/before_2.JPG)
+![Before](images/before_3.JPG)
+![Before](images/before_4.JPG)
+![Before](images/before_5.JPG)
+
+# After
+All new and shiny BalCCon after LOC did their thing!
+![After](images/after_1.JPG)
+![After](images/after_2.JPG)
+![After](images/after_3.JPG)
+![After](images/after_4.JPG)
+![After](images/after_5.JPG)
+![After](images/after_6.JPG) 
+![After](images/after_7.JPG)
+![After](images/after_8.JPG )
+![After](images/after_9.JPG)
+![After](images/after_10.JPG)
+![After](images/after_11.JPG) 
+![After](images/after_12.JPG) 
+![After](images/after_13.JPG)
+![After](images/after_14.JPG)
+
 ## How to play with the light
 During BalCCon2k19 you have the following options :
 1 Come to the LOC desk, use the controller GIU
